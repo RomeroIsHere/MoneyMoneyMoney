@@ -82,7 +82,7 @@
 
     function BilletePlay(Index){
         //50, 100, 200, 500, nada, 20
-        const fileName = ["Billete-20-pesos.wav", "Billete-50-pesos.wav","Billete-100-pesos.wav","Billete-200-pesos.wav","Billete-500-pesos.wav","Billete-no-Detectado.mp3"];
+        const fileName = ["Billete-50-pesos.wav","Billete-100-pesos.wav","Billete-200-pesos.wav","Billete-500-pesos.wav","Billete-no-Detectado.mp3", "Billete-20-pesos.wav"];
         const audio = new Audio("./audio/"+fileName[Index]);
         audio.play();
     }
