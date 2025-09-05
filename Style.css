@@ -1,93 +1,122 @@
-h1,h2,h3,h4,ol,ul{
-    align-items: center;
-    float: center;
+h1,h2,h3,h4,ol,ul {
+    text-align: center;
     padding: 30px;
-    margin:auto;
-    background: rgba(0, 0, 0, 0.0);
-    font: oblique;
-
+    margin: auto;
+    background: transparent;
+    font-style: oblique;
+    color: #e0d7ff;
 }
 
 body {
   min-height: 100vh;
-  margin: 10;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  background-color: aqua;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a0033, #2e004f, #4b0082);
+  font-family: 'Inter', sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold';
 }
 
-.mainDiv{
+.mainDiv {
     border-radius: 32px;    
-    align-items: center;
-    float: center;
-    width: 50%;
-    margin:auto;
+    width: 60%;
+    max-width: 850px;
+    margin: auto;
     margin-top: 10px;
-    max-width: fit-content;
-    background:#0A3871;
-    color: #D8DFE8;
-    align-self: center;
-    align-items: center;
-    padding:20px;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    font-family: 'Inter',sans-serif,Impact, Haettenschweiler, 'Arial Narrow Bold';
-}
-
-.mainDiv > * {
+    background: #120021;
+    color: #EAEAEA;
+    padding: 25px;
+    box-shadow: 0px 15px 40px rgba(138, 43, 226, 0.6);
     display: flex;
-    gap: 30px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid rgba(186, 85, 211, 0.4);
 }
 
-.titleDiv{
-    border-radius: 32px;    
-    align-items: center;
-    float: center;
-    width: 50%;
-    gap: 30px;
-    margin:auto;
+.titleDiv {
+    border-radius: 20px;    
+    width: 60%;
+    margin: auto;
     margin-top: 10px;
-    max-width: fit-content;
-    background:#99c7ff;
-    color: #002555;
-    align-self: center;
-    align-items: center;
-    padding:20px;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    background: linear-gradient(90deg, #8e2de2, #4a00e0);
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    text-shadow: 0px 0px 12px rgba(255,255,255,0.8);
+    box-shadow: 0px 6px 20px rgba(142, 45, 226, 0.5);
 }
 
-.webcam{
+.webcam {
     min-width: 200px;
     min-height: 200px;
     display: flex;
-    float: center;
-    margin:auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
 }
 .webcam > * {
-    border-radius: 5px;
-    margin:auto;
-    width: 33%;
-}
-button{
-    padding: 10px;
-    gap: 8px;
-    margin-top: 10px;
-    margin-bottom: 10px;
     border-radius: 15px;
-    width: 328px;
-    height: 67px;
-    font-family: 'Inter',sans-serif,Impact, Haettenschweiler, 'Arial Narrow Bold', ;
-    font-style: normal;
-    font-weight: 400;
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    box-shadow: 0px 8px 30px rgba(186, 85, 211, 0.6);
+    border: 3px solid #8e2de2;
+}
+
+button {
+    padding: 12px;
+    margin: 10px;
+    border-radius: 15px;
+    width: 200px;
+    height: 55px;
+    font-family: 'Inter', sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold';
     font-size: 16px;
-    line-height: 19px;
+    font-weight: bold;
     text-align: center;
-    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    color: #fff;
 }
-#start{
-    background-color: #7affad;
+
+#start {
+    background: linear-gradient(90deg, #9d50bb, #6e48aa);
 }
-#identify{
-    background-color: #00ff2a;
+#start:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 25px rgba(157, 80, 187, 0.7);
+}
+
+#identify {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+}
+#identify:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 25px rgba(106, 17, 203, 0.7);
+}
+
+#Prediction {
+    text-align: center;
+    font-size: 26px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #d5b3ff;
+    text-shadow: 0px 0px 15px rgba(213,179,255,0.9),
+                 0px 0px 30px rgba(138,43,226,0.6);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0px 0px 10px rgba(186,85,211,0.8),
+                     0px 0px 20px rgba(106,17,203,0.5);
+    }
+    to {
+        text-shadow: 0px 0px 20px rgba(221,160,221,1),
+                     0px 0px 40px rgba(138,43,226,0.9);
+    }
 }
