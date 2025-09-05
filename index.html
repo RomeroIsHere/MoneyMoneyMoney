@@ -79,6 +79,15 @@
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
     }
+
+    function BilletePlay(Index){
+        //50, 100, 200, 500, nada, 20
+        const fileName = ["Billete-20-pesos.wav", "Billete-50-pesos.wav","Billete-100-pesos.wav","Billete-200-pesos.wav","Billete-500-pesos.wav","Billete-no-Detectado.mp3"];
+        const audio = new Audio("./audio/"+fileName[Index]);
+        audio.play();
+    }
+
+    
     async function pollPrediction(){
         const prediction = await model.predict(webcam.canvas);
         //Prediction is My Object with the Probability/confidence and Name of the Class
@@ -91,6 +100,7 @@
             }
         }
         announceHeader.innerHTML = prediction[bestPrediction].className + ": " + prediction[bestPrediction].probability.toFixed(2);
+        BilletePlay(bestPrediction);
     }
 
 </script>
